@@ -1,0 +1,89 @@
+# Build outputs
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa]rtifacts/
+[Ll]ogs/
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.rsuser
+*.sln.ide
+
+# Visual Studio Code
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+!.vscode/settings.json
+
+# JetBrains Rider / ReSharper
+.idea/
+*.sln.iml
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# .NET / NuGet
+project.lock.json
+project.fragment.lock.json
+artifacts/
+.nuget/
+*.nupkg
+*.snupkg
+packages/
+!packages/build/
+*.nuget.g.props
+*.nuget.g.targets
+
+# Test results
+[Tt]est[Rr]esult*/
+[Bb]enchmarkDotNet.Artifacts/
+
+# ASP.NET Core
+wwwroot/lib/
+appsettings.*.local.json
+
+# Logs
+*.log
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+secrets.json
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Publish outputs
+publish/
+[Pp]ublish/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.orig
+
+# Coverage reports
+coverage/
+coverage.*
+*.coverage
+*.coveragexml
+
+# Local databases
+*.mdf
+*.ldf
+*.sqlite
+*.sqlite3

@@ -1,0 +1,35 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: book-review-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: bookreview
+      POSTGRES_USER: bookreview
+      POSTGRES_PASSWORD: bookreview
+    ports:
+      - "5434:5432"
+    volumes:
+      - book_review_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U bookreview -d bookreview"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  rabbitmq:
+    image: rabbitmq:4-management
+    container_name: book-review-rabbitmq
+    restart: unless-stopped
+    environment:
+      RABBITMQ_DEFAULT_USER: bookreview
+      RABBITMQ_DEFAULT_PASS: bookreview
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - book_review_rabbitmq_data:/var/lib/rabbitmq
+
+volumes:
+  book_review_postgres_data:
+  book_review_rabbitmq_data:
